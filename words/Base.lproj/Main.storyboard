@@ -16,9 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backside" translatesAutoresizingMaskIntoConstraints="NO" id="2Ao-fv-La4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backside" translatesAutoresizingMaskIntoConstraints="NO" id="2Ao-fv-La4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="7GC-gh-fzt"/>
+                                    <constraint firstAttribute="width" secondItem="2Ao-fv-La4" secondAttribute="height" multiplier="375:667" id="too-MW-4u4"/>
+                                    <constraint firstAttribute="width" constant="375" id="vrF-Ke-0Cp"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSQ-oP-XCO" userLabel="AnswerLabel">
                                 <rect key="frame" x="45" y="261" width="287" height="49"/>
@@ -59,6 +64,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Ao-fv-La4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ZC-UL-83c"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ao-fv-La4" secondAttribute="bottom" id="Cn7-NY-mH5"/>
+                            <constraint firstItem="2Ao-fv-La4" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="Z7d-1z-rrd"/>
+                            <constraint firstItem="2Ao-fv-La4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="hIe-E2-wlE"/>
+                            <constraint firstItem="2Ao-fv-La4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vYC-3t-SEr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="AnswerLabel" destination="uSQ-oP-XCO" id="ZOP-53-Ks4"/>
