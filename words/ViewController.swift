@@ -143,7 +143,9 @@ class ViewController: UIViewController {
         
         if a<words.count{
             if let answerVvod: String = WordsTextField.text {
-                if answerVvod == answer[b] || answerVvod == answer[b+1] || answerVvod == answer[b+2]{
+                if answerVvod.caseInsensitiveCompare(answer[b]) == ComparisonResult.orderedSame ||
+                    answerVvod.caseInsensitiveCompare(answer[b + 1]) == ComparisonResult.orderedSame ||
+                    answerVvod.caseInsensitiveCompare(answer[b+2]) == ComparisonResult.orderedSame {
                     result.textColor = UIColor.green
                     result.text = "Correct"
                     sc = sc+1
